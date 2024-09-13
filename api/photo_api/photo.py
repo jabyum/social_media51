@@ -20,7 +20,7 @@ import random
 
 photo_router = APIRouter(prefix="/photo", tags=["Фотки"])
 # второй вариант
-@photo_router.post("/add_photo")
+@photo_router.post("/add_photo2")
 async def add_photo(post_id: int,
                     photo_file: UploadFile = File(...)):
     file_id = random.randint(1, 1000000000)
